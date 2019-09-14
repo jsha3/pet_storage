@@ -1,0 +1,11 @@
+<h1>Pet Shelter</h1>
+<a routerLink="//pets/">Home</a>
+<br>
+<div>
+    <h3>Details about {{pet.name}}</h3>
+    <p>Pet type: {{pet.type}}</p>
+    <p>Description: {{pet.description}}</p>
+    <p>Skills: {{pet.skill1}}, {{pet.skill2}}, {{pet.skill3}}</p>
+</div>
+<br>
+<button (click)="adoptPet(pet._id)">Adopt this pet!</button>

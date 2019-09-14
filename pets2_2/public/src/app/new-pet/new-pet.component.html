@@ -1,0 +1,37 @@
+<h1>Pet Shelter</h1>
+<p>Know of a pet needing a home?</p>
+<br>
+<form (submit)="handleSubmit()">
+    <div>
+        <label for="">Pet name: </label>
+        <p><input type="text" name="name" [(ngModel)]="pet.name"></p>
+    </div>
+    <p *ngIf="errors.hasOwnProperty('name')">{{errors.name.message}}</p>
+    <div>
+        <label for="">Pet type: </label>
+        <p><input type="text" name="type" [(ngModel)]="pet.type"></p>
+    </div>
+    <p *ngIf="errors.hasOwnProperty('type')">{{errors.type.message}}</p>
+    <div>
+        <label for="">Description: </label>
+        <p><input type="text" name="description" [(ngModel)]="pet.description"></p>
+    </div>
+    <p *ngIf="errors.hasOwnProperty('description')">{{errors.description.message}}</p>
+
+    <h3>Skills: </h3>
+    <div>
+        <label for="">Skill 1: </label>
+        <input type="text" name="skill1" [(ngModel)]="pet.skill1">
+    </div>
+    <div>
+        <label for="">Skill 2: </label>
+        <input type="text" name="skill2" [(ngModel)]="pet.skill2">
+    </div>
+    <div>
+        <label for="">Skill 3: </label>
+        <input type="text" name="skill3" [(ngModel)]="pet.skill3">
+    </div>
+    <br>
+    <button>Add pet</button>
+</form>
+<button (click)="goToIndex(pet._id)">Cancel</button>
